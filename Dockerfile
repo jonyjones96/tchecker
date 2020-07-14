@@ -4,7 +4,7 @@ ENV GO111MODULE=on
 ENV GOFLAGS=-mod=vendor
 
 RUN mkdir /tcheck
-ADD . /tcheck/
+ADD ./src /tcheck/
 WORKDIR /tcheck
 
 EXPOSE 8080
