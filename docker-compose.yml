@@ -35,6 +35,10 @@ services:
     container_name: tcheck-api
     build: .
     restart: always
+    environment:
+      - HOST_ENV=mongo
+      - USER_ENV=user
+      - PASS_ENV=example
     ports:
       - 8080:8080
     networks:
