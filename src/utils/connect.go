@@ -25,9 +25,8 @@ func ConnectDB() error {
 
 	// May be of use: https://stackoverflow.com/questions/17588876/mongodb-conf-bind-ip-127-0-0-1-does-not-work-but-0-0-0-0-works
 	var (
-		client *mongo.Client
-		//mongoURL = "mongodb://mongo:27017"		// Needs to be used in docker container
-		mongoURL = fmt.Sprintf("mongodb://%s:27017", host) // Needs to be used for local dev
+		client   *mongo.Client
+		mongoURL = fmt.Sprintf("mongodb://%s:27017", host)
 	)
 
 	fmt.Println("Initalising connection...")

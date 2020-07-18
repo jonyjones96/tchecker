@@ -33,7 +33,9 @@ services:
 
   tcheck-api:
     container_name: tcheck-api
-    build: .
+    build: 
+      context: ../
+      dockerfile: Dockerfile.api
     restart: always
     environment:
       - HOST_ENV=mongo
