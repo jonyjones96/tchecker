@@ -2,3 +2,4 @@
 notes.md
 *.log
 src/vendor/*
+src/bin/*
