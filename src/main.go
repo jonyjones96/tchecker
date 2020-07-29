@@ -24,6 +24,7 @@ func run() (err error) {
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/status", routes.Status).Methods("GET")
 	router.HandleFunc("/api", routes.InsertTool).Methods("POST")
+	router.HandleFunc("/tools", routes.GetTool).Methods("GET")
 
 	log.Printf("API is running on port 8080...")
 	log.Fatal(http.ListenAndServe(":8080", router))
