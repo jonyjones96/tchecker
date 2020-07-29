@@ -9,12 +9,6 @@ import (
 	"github.com/gorilla/mux"
 )
 
-//type Person struct {
-//  Name string
-/// Age  int
-//City string
-//}
-
 func main() {
 
 	err := run()
