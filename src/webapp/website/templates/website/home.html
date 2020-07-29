@@ -1,0 +1,13 @@
+{% extends "website/base.html"%}
+  {%block content %}
+    {% for tool in tools  %}  
+       <h1>Product Name: {{tool.productName}}</h1>
+       <p>Product Code: {{tool.productCode }} Price: {{tool.productPrice}}</p>
+       <p> Product Features: <p>
+       <ol>
+         {% for j in tool.productFeatures %} 
+         <li> {{j}}</li>
+         {% endfor %}
+       </ol>
+    {% endfor %}  
+{% endblock content %}
