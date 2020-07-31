@@ -3,3 +3,7 @@ notes.md
 *.log
 src/vendor/*
 src/bin/*
+
+# Python Chache files
+__pychache__/
+*.py[cod]
