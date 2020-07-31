@@ -1,0 +1,12 @@
+FROM python:3
+
+RUN mkdir /webapp
+ADD /src/webapp /webapp
+WORKDIR /webapp
+
+RUN apt-get update && apt-get upgrade -y && apt-get install -y
+RUN pip install django requests
+
+EXPOSE 8000
+
+CMD ["python","manage.py","runserver", "0.0.0.0:8000"]

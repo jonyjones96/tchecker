@@ -46,5 +46,17 @@ services:
     networks:
       - db_net
 
+  webapp:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.webapp
+    restart: always
+    environment:
+      - HOST_ENV=tcheck-api
+    ports:
+      - 8000:8000
+    networks:
+      - db_net
+
 networks:
   db_net:
