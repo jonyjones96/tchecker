@@ -47,6 +47,7 @@ services:
       - db_net
 
   webapp:
+    container_name: webapp
     build:
       context: ..
       dockerfile: docker/Dockerfile.webapp
@@ -55,6 +56,17 @@ services:
       - HOST_ENV=tcheck-api
     ports:
       - 8000:8000
+    networks:
+      - db_net
+
+  nginx:
+    container_name: nginx
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.nginx
+    restart: always
+    ports:
+      - 80:80
     networks:
       - db_net
 
